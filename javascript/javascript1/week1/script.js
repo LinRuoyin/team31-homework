@@ -19,10 +19,10 @@ if(shouldShowResultInDogYears){
 // Homework 3 : Housey pricey (A house price estimator)
 
 
-function housePrice(width,depth,height,gardenSizeM2){
+function estimatedHousePrice(width,depth,height,gardenSizeM2){
   let volumeInMeters= width*depth*height
-  let housePrice = volumeInMeters*2.5*1000 + gardenSizeM2*300
-  return housePrice
+  let estimatedHousePrice = volumeInMeters*2.5*1000 + gardenSizeM2*300
+  return estimatedHousePrice
 }
 
 if(estimatedHousePrice(8,10,10,100)<2500000){
@@ -41,7 +41,8 @@ if (estimatedHousePrice(5,11,8,70)<1000000){
 const firstWords = ["Easy", "Awesome", "Creative", "Dynamic", "Bold", "Bright", "Next", "Smart", "Happy", "Future"]
 const secondWords = ["Solutions", "Corporation", "Ventures", "Technologies", "Designs", "Concepts", "Enterprises", "Works", "Studios", "Hub"]
 
-const randomNumber= Math.floor(Math.random()*10)
+const randomNumber1= Math.floor(Math.random()*10)
+const randomNumber2= Math.floor(Math.random()*10)
 
-let startupName= firstWords[randomNumber]+ ' ' + secondWords[randomNumber]
+let startupName= firstWords[randomNumber1]+ ' ' + secondWords[randomNumber2]
 console.log(`The startup: "${startupName}" contains ${startupName.length} characters`)
