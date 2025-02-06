@@ -19,10 +19,10 @@ if(shouldShowResultInDogYears){
 // Homework 3 : Housey pricey (A house price estimator)
 
 
-function estimatedHousePrice(width,depth,height,gardenSizeM2){
+function housePrice(width,depth,height,gardenSizeM2){
   let volumeInMeters= width*depth*height
-  let estimatedHousePrice = volumeInMeters*2.5*1000 + gardenSizeM2*300
-  return estimatedHousePrice
+  let housePrice = volumeInMeters*2.5*1000 + gardenSizeM2*300
+  return housePrice
 }
 
 if(estimatedHousePrice(8,10,10,100)<2500000){
