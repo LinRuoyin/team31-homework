@@ -6,10 +6,10 @@ const age = yearFuture - yearOfBirth
 console.log(`You will be ${age} years old in ${yearFuture}`)
 
 // Homework 2 : Goodboy-Oldboy (A dog age calculator) 
-let dogYearOfBirth = 2017
-let dogYearFuture = 2027
-let dogYear = dogYearFuture-dogYearOfBirth
-let shouldShowResultInDogYears = true
+const dogYearOfBirth = 2017
+const dogYearFuture = 2027
+const dogYear = dogYearFuture-dogYearOfBirth
+const shouldShowResultInDogYears = true
 if(shouldShowResultInDogYears){
   console.log(`Your dog will be ${dogYear*7} dog years old in ${dogYearFuture}`)
 }else {
@@ -20,8 +20,8 @@ if(shouldShowResultInDogYears){
 
 
 function housePrice(width,depth,height,gardenSizeM2){
-  let volumeInMeters= width*depth*height
-  let housePrice = volumeInMeters*2.5*1000 + gardenSizeM2*300
+  const volumeInMeters= width*depth*height
+  const housePrice = volumeInMeters*2.5*1000 + gardenSizeM2*300
   return housePrice
 }
 
