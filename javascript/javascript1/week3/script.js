@@ -29,6 +29,10 @@ const travelInformation = {
 };
 
 function travelTime(travelInformation) {
+  if(travelInformation.speed===0){
+    return "Error: speed can not be 0"
+  }
+
   const time = travelInformation.destinationDistance / travelInformation.speed;
 
   const hours = Math.floor(time);
@@ -103,11 +107,14 @@ function getNote(id) {
   for (let i = 0; i < notes.length; i++) {
     if (notes[i].id === id) {
       return notes[i];
-    } else {
-      return null;
     }
+    }
+
+    return null 
+    // revised based on comment: 
+    // should return null after for loop otherwise it doesn't check all the notes[i].id
   }
-}
+
 
 const firstNote = getNote(1);
 console.log(firstNote); // {content: 'Pick up groceries', id: 1}
@@ -233,8 +240,8 @@ function activitySpentMostTimeOn(activities) {
   let maxTime = allActivitiesTime[0];
   let indexOfMaxTime = 0;
   for (let i = 1; i < allActivitiesTime.length; i++) {
-    if (maxTime < activitiesTotalTime[i]) {
-      maxTime = activitiesTotalTime[i];
+    if (maxTime < allActivitiesTime[i]) {
+      maxTime = allActivitiesTime[i];
       indexOfMaxTime = i;
     }
   }
