@@ -18,16 +18,23 @@ ingredientNameInput.placeholder="Ingredient"
 ingredientNameInput.required = true
 
 const amountInput = document.createElement("input")
-amountInput.type = 'text'
+amountInput.type = 'number'
 amountInput.classList.add("ingredient-amount")
 amountInput.placeholder = "Amount";
 amountInput.required = true;
 
+const unitInput = document.createElement("input")
+unitInput.type='text'
+unitInput.classList.add("ingredient-unit")
+unitInput.placeholder = "Unit";
+unitInput.required = true;
+
 addDiv.appendChild(ingredientNameInput)
 addDiv.appendChild(amountInput)
+addDiv.appendChild(unitInput)
 IngredientList.appendChild(addDiv)
 
 }
 
 
-document.querySelector(".add-ingredient-button").addEventListener('click',addIngredient)
+document.querySelector("#add-ingredient-button").addEventListener('click',addIngredient)
